@@ -27,11 +27,13 @@ header {
   justify-content: space-between;
 }
 
+/*menu + s'inscrire"*/
 .menuregister {
   display: flex;
   align-items: center;
 }
 
+/*bouton s'inscrire*/
 .register {
   text-decoration: none;
 }
@@ -60,7 +62,6 @@ nav a {
   border-top: 3px solid#0065FC;
 }
 
-/*main*/
 /********** section recherche**********/
 .research {
   background-color: #0065fc;
@@ -173,16 +174,12 @@ nav a {
   background-color: indianred;
 }
 
-
-
 /*main*/
-
 
 .button:hover {
   background-color: mediumslateblue;
 }
 
- 
 @media (min-width:768px){
     .sleep{
         display: flex;
@@ -190,35 +187,13 @@ nav a {
         justify-content: space-between;
     }
 } 
-/* règles CSS pour les navigateurs mobiles */
-/*@media all and (max-device-width:480px){
-    .theheader{
-        flex-wrap: wrap;
-        flex-direction: row-reverse;  
-    }
-    .menuregister{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-    }
-} */
-/* smartphones */
-/*@media (max-width:480px)
-{
-    .menuregister{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-} */
-/* tablettes */
-/*@media (max-width:991px){ }
-*/
+
 /********** infos communes hébergements + populaires **********/
 .card {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   box-shadow: 2px 2px 3px rgba(202, 191, 191, 0.589);
 }
@@ -395,3 +370,81 @@ footer a {
 .title_links {
   font-weight: bold;
 }
+
+/* règles CSS pour les navigateurs mobiles */
+/*@media all and (max-device-width:480px){
+    .theheader{
+        flex-wrap: wrap;
+        flex-direction: row-reverse;  
+    }
+    .menuregister{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+} */
+/* smartphones */
+/*@media (max-width:480px)
+{
+    .menuregister{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+} */
+/* tablettes */
+/*@media (max-width:991px){ }
+*/
+
+/********** Adaptation aux grands écrans **********/
+@media screen and (min-width: 1200px){
+  
+}
+
+/********** Adaptation aux tablettes et petits ordis **********/
+@media screen and (min-width: 768px) and (max-width: 979px){
+  
+}
+
+/********** Adaptation aux tablettes **********/
+@media screen and (max-width: 767px){
+  
+}
+
+/********** Adaptation aux smartphones **********/
+@media screen and (max-width: 480px){
+  .topsearch{
+    display: flex;
+  }
+
+  .search{
+    width: 100%;
+  }
+
+  .acco_cards{
+    flex-direction: column;
+  }
+
+  #accommodation{
+    background-color: white;
+  }
+  .accommodation_title{
+    width: 100%;
+  }
+
+  .displaymore{
+    width: 100%;
+  }
+
+  .activities_photos{
+    flex-direction: column;
+  }
+
+  .blocfinal{
+    flex-direction: column;    
+  }
+
+  .links{
+    width: 100%;
+  }
+}
+  
