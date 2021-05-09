@@ -230,7 +230,7 @@ nav a {
 .acco_cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .acco_cards > .card {
   margin: 10px;
@@ -245,9 +245,10 @@ nav a {
   margin-left: 1rem;
 }
 
+/* à supprimer ? 
 .card_photo{
   height: 100%;
-}
+} */
 
 .card_photo img {
   border-radius: 20px 20px 0 0;
@@ -331,6 +332,7 @@ img.card2photos{
 .card_link{
   text-decoration: none;
   color: black;
+  width: 31%;
 }
 .column1 img {
   height: 390px;
@@ -420,12 +422,19 @@ footer a {
     width: 100%;
   }
 
-  .acco_cards{
-    flex-direction: column;
+  h1{
+    flex-wrap: wrap;
   }
+  #popular{
+    width: 100%;
+  }
+
+  /*.card_photo img*/
+   
 
   #accommodation{
     background-color: white;
+    width: 100%;
   }
   .accommodation_title{
     width: 100%;
@@ -435,10 +444,15 @@ footer a {
     width: 100%;
   }
 
+  #activities{
+    width: 100%;
+    height: auto;
+    }
   .activities_photos{
     flex-direction: column;
   }
 
+  
   .blocfinal{
     flex-direction: column;    
   }
