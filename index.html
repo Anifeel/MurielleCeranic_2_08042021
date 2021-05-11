@@ -17,7 +17,6 @@
   </head>
 
   <body class="container">
-
     <!----------header---------->
     <header class="theheader">
       <img class="logo" src="images/logo/Reservia.svg" alt="logo Reservia" ; />
@@ -37,15 +36,12 @@
     <!----------main---------->
     <main>
       <section class="topsearch">
-        <!----------section recherche---------->        
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>        
+        <!----------section recherche---------->
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
         <form class="search" method="get" action="#.php">
-          <label for="ville">
-            <img
-              src="images/icones/gps.svg"
-              alt="icone de localisation gps"
-              id="gps"/>
+          <label class="label_input" for="ville">
+            <i class="fas fa-map-marker-alt" id="gps"></i>
           </label>
           <input
             class="textcity"
@@ -55,12 +51,14 @@
             placeholder="Marseille, France"
             autofocus
           />
-          <input class="research" type="submit" value="Rechercher"/>
-          <i class="fas fa-search"></i>
+          <button class="research" type="submit" value="Rechercher">
+            <span class="research_text">Rechercher</span>
+            <i class="fas fa-search research_icon"></i>
+          </button>
         </form>
         <!----------boutons filtres---------->
-        
-          <h2>Filtres</h2>
+
+        <h2>Filtres</h2>
         <div class="filters">
           <div class="button_filters">
             <div class="button_icon">
@@ -393,10 +391,10 @@
             </a>
             <a class="card_link" href="#">
               <article class="card2">
-                <img 
-                    class="card2photos"
-                    src="images/parc_longchamp.jpg"
-                    alt="le parc Longchamp à Marseille"
+                <img
+                  class="card2photos"
+                  src="images/parc_longchamp.jpg"
+                  alt="le parc Longchamp à Marseille"
                 />
                 <h3 class="card_name">Parc Longchamp</h3>
               </article>
