@@ -5,7 +5,7 @@
 /* centrage de la page */
 body {
   font-family: "Raleway", serif;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -221,14 +221,20 @@ nav a:visited {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.3rem;
   margin-bottom: 1rem;
   box-shadow: 2px 2px 3px rgba(202, 191, 191, 0.589);
+  text-decoration: none;
+  color: black;
+  width: 30%; 
+  
 }
 
 .card_infos {
   display: flex;
   flex-direction: column;
+  
+  
 }
 
 h3 {
@@ -269,6 +275,7 @@ h3 {
 }
 #accommodation .card {
   flex-direction: column;
+  height: 48%;
 }
 
 #accommodation h2 {
@@ -281,8 +288,7 @@ h3 {
 
 .card_photo img {
   border-radius: 20px 20px 0 0;
-  width: 100%;
-  height: 100%;
+  width: 100%;  
   object-fit: cover;
 }
 
@@ -299,7 +305,6 @@ h3 {
 @media (min-width: 768px) {
   #popular {
     border-radius: 20px;
-
     padding: 30px;
     margin-left: 30px;
   }
@@ -311,12 +316,10 @@ h3 {
 
 #popular .card {
   width: 100%;
-  height: 28%;
+  height: 21%;
+
 }
 
-picture.aucoeur {
-  width: 61%;
-}
 .popular_photo img {
   width: 100%;
   height: 100%;
@@ -339,6 +342,11 @@ picture.aucoeur {
   border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+
+#activities a{
+  color: inherit;
+  text-decoration: none;
 }
 
 .activities_photos {
@@ -366,13 +374,16 @@ img.card2photos {
   height: 35px;
   margin-bottom: 40px;
   padding-left: 15px;
+  
 }
 
+/*
 .card_link {
   text-decoration: none;
   color: black;
   width: 31%;
-}
+} */
+
 .column1 img {
   width: 300px;
   height: 390px;
@@ -435,22 +446,6 @@ footer a {
   font-weight: bold;
 }
 
-/* règles CSS pour les navigateurs mobiles */
-/*@media all and (max-device-width:480px){
-    .theheader{
-        flex-wrap: wrap;
-        flex-direction: row-reverse;  
-    }
-    
-  
-/* smartphones */
-/*@media (max-width:480px)
-{
-    .menuregister{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-} */
 /* tablettes */
 /*@media (max-width:991px){ }
 */
@@ -560,15 +555,17 @@ footer a {
 
   .acco_cards {
     flex-direction: column;
+    width: 100%;
   }
 
   .card_infos {
     width: 100%;
   }
-
+/*
   .card_link {
     width: 100%;
   }
+*/
   #activities {
     width: 100%;
     height: auto;
