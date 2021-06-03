@@ -222,29 +222,31 @@ nav a:visited {
   background-color: white;
   border-radius: 20px;
   padding: 0.3rem;
-  margin-bottom: 1rem;
   box-shadow: 2px 2px 3px rgba(202, 191, 191, 0.589);
   text-decoration: none;
   color: black;
-  width: 30%; 
-  
-}
-
-.card_infos {
-  display: flex;
-  flex-direction: column;
-  height: 40%;
-  
-  
+  width: 30%;   
 }
 
 h3 {
   font-size: 17px;
 }
-.card_infos h3 {
-  margin-bottom: 0;
+.card_infos {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 60%;
+padding: 16px;
 }
 
+.card_infos h3 {
+  margin: 0;
+}
+
+.card_infos_price {
+  margin: 0;
+  margin-top: 6px;
+}
 .super_stars {
   display: flex;
 }
@@ -270,28 +272,37 @@ h3 {
 .acco_cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 30px;
+  
 }
+
+.acco_card_infos {
+  padding: 16px;
+}
+
+.acco_card_infos h3,
+.acco_card_infos p {
+  margin: 0;
+  margin-bottom: 6px;
+  }
 
 #accommodation .card {
   flex-direction: column;  
 }
 
-#accommodation h2 {
-  margin-left: 1rem;
-}
-
 #accommodation a{
-  width: 235px;
+  width: calc(30% - 30px);
 }
 .card_photo {
-  height: 195px;
-  width: 235px;
+  height: 130px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
 }
 
 .card_photo img {
   border-radius: 20px 20px 0 0;
-  width: 100%;
+  width: 100%;  
   height: 100%;
   object-fit: cover;
 }
@@ -320,7 +331,7 @@ h3 {
 
 #popular .card {
   width: 100%;
-  height: 21%;
+  height:160px;
 
 }
 
@@ -332,12 +343,7 @@ h3 {
 }
 
 .popular_photo {
-  margin-right: 1.5rem;
   width: 40%;
-}
-
-#popular .card_infos p {
-  padding-bottom: 2rem;
 }
 
 /********** section Activités à Marseille **********/
@@ -562,9 +568,7 @@ footer a {
     width: 100%;
   }
 
-  .card_infos {
-    width: 100%;
-  }
+ 
 /*
   .card_link {
     width: 100%;
