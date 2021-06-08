@@ -16,16 +16,18 @@
     ></script>
   </head>
 
-  <body class="container">
+  <body>
     <!----------header---------->
-    <header class="theheader">
-      <img class="logo" src="images/logo/Reservia.svg" alt="logo Reservia" ; />
+    <header>
+      <img class="logo" src="images/logo/Reservia.svg" alt="logo Reservia" ; />      
       <nav class="header_nav">
         <ul class="menu">
           <li>
             <a class="accommodation" href="#accommodation">Hébergements</a>
           </li>
-          <li><a class="activities" href="#activities">Activités</a></li>
+          <li>
+            <a class="activities" href="#activities">Activités</a>
+          </li>
         </ul>
       </nav>
       <a class="register" href="register">S'inscrire</a>
@@ -55,32 +57,33 @@
           </button>
         </form>
         <!----------boutons filtres---------->
-
-        <h2>Filtres</h2>
-        <div class="filters">
-          <div class="button_filters">
-            <div class="button_icon">
-              <i class="fas fa-money-bill-wave"></i>
+        <div class="filters_area">
+          <h2>Filtres</h2>
+          <div class="filters">
+            <div class="button_filters">
+              <div class="button_icon">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <span class="filter_text">Economique</span>
             </div>
-            <span class="filter_text">Economique</span>
-          </div>
-          <div class="button_filters">
-            <div class="button_icon">
-              <i class="fas fa-child"></i>
+            <div class="button_filters">
+              <div class="button_icon">
+                <i class="fas fa-child"></i>
+              </div>
+              <span class="filter_text">Familial</span>
             </div>
-            <span class="filter_text">Familial</span>
-          </div>
-          <div class="button_filters">
-            <div class="button_icon">
-              <i class="fas fa-heart"></i>
+            <div class="button_filters">
+              <div class="button_icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <span class="filter_text">Romantique</span>
             </div>
-            <span class="filter_text">Romantique</span>
-          </div>
-          <div class="button_filters">
-            <div class="button_icon">
-              <i class="fas fa-dog"></i>
+            <div class="button_filters">
+              <div class="button_icon">
+                <i class="fas fa-dog"></i>
+              </div>
+              <span class="filter_text">Animaux autorisés</span>
             </div>
-            <span class="filter_text">Animaux autorisés</span>
           </div>
         </div>
         <!----------résultats recherche---------->
@@ -100,8 +103,7 @@
             <h2>Les plus populaires</h2>
             <img src="images/chart-line-solid.svg" alt="" width="20px" />
           </div>
-          <!-- <a class="card_link" href="#"> -->
-          <!-- <article class="card"> -->
+       
           <a class="card" href="#">
             <picture class="popular_photo">
               <img
@@ -399,7 +401,7 @@
       </section>
     </main>
 
-    <footer class="blocfinal">
+    <footer>
       <div class="links">
         <p class="title_links">A propos</p>
         <a href="#">Fonctionnement du site</a>

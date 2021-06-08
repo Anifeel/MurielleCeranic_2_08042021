@@ -6,7 +6,7 @@
 body {
   font-family: "Raleway", serif;
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;  
 }
 
 @font-face {
@@ -14,30 +14,18 @@ body {
   src: url("Raleway.ttf");
 }
 
-/* à supprimer ? */
-header {
-  margin: 0 2px;
-}
 
-/* box-sizing: border-box; */
-/* à supprimer ? */
-.imgfilter {
-  display: flex;
-  font-size: 5%;
-}
 /******************header********************/
-.theheader {
+header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
+  flex-wrap: wrap;  
+  align-items: center;  
+  position: relative;
+  margin: 0 35px;
 }
 
-/*menu + s'inscrire"*/
-.menuregister {
-  display: flex;
-  align-items: center;
+.header_nav{
+  margin-left: auto;
 }
 
 /*bouton s'inscrire*/
@@ -66,6 +54,7 @@ nav a:visited {
   list-style: none;
   display: flex;
   align-items: center;
+  margin: 0%;
 }
 
 .menu li {
@@ -78,6 +67,14 @@ nav a:visited {
 .menu li:hover {
   border-top: 3px solid#0065FC;
 }
+
+nav li .accommodation {
+  color: #0065fc;
+  }
+
+  main{
+    margin: 0 35px;
+  }
 
 .topsearch {
   padding: 20px;
@@ -133,16 +130,15 @@ nav a:visited {
 }
 
 /********** les filtres **********/
+.filters_area {
+  display: flex;
+}
+
 .filters {
   display: flex;
   justify-content: left;
   align-items: center;
-}
-
-/* à supprimer ? */
-.filters {
-  display: flex;
-  /*border: red solid 3px; */
+  margin-left: 40px;
 }
 
 .filters h2 {
@@ -153,11 +149,12 @@ nav a:visited {
   height: 3rem;
   width: 3rem;
   background-color: #deebff;
-  border-radius: 100%;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   color: #0065fc;
   font-size: 1.2rem;
+  margin-left: -4px;
 }
 
 .button_filters {
@@ -165,7 +162,6 @@ nav a:visited {
   border: 2px solid #d9d9d9;
   border-radius: 2rem;
   margin-right: 2rem;
-
   font-weight: bold;
   display: flex;
   height: 3rem;
@@ -180,16 +176,21 @@ nav a:visited {
   padding: 1rem;
   letter-spacing: 1pt;
 }
-/* à supprimer ? */
-.imgfilter {
-  width: 15px;
-}
+
 /**********  **********/
+
 .infologo {
-  border-radius: 100%;
-  border: 10px solid #f2f2f2;
-  margin-right: 1.4rem;
-  color: #0065fc;
+  border-radius: 50%;
+width: 1.3rem;
+height: 1.3rem;
+background-color: white;
+border: 1px solid #d9d9d9;
+margin-right: 1.4rem;
+color: #0065fc;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 12px;
 }
 
 .infos {
@@ -268,12 +269,17 @@ padding: 16px;
   width: 865px;
 }
 
+#accommodation h2,
+#accommodation h3 {
+  margin-left: 15px;
+}
+
 /* ensemble des fiches hébergements à Marseille */
 .acco_cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  
+  justify-content: center;  
 }
 
 .acco_card_infos {
@@ -287,12 +293,10 @@ padding: 16px;
   }
 
 #accommodation .card {
-  flex-direction: column;  
+  flex-direction: column; 
+  width: calc(32% - 16px);  
 }
 
-#accommodation a{
-  width: calc(30% - 30px);
-}
 .card_photo {
   height: 130px;
   width: 100%;
@@ -364,19 +368,13 @@ padding: 16px;
   justify-content: space-between;
   width: 100%;
 }
-/* inutile ?
-.card2photos {
-  width: 300px;
-} */
 
 img.card2photos {
   border-radius: 20px 20px 0 0;
 }
 
 .card2 {
-  border-radius: 20px;
-  /*width: 300px;*/
-  box-shadow: 2px 2px 1px #f2f2f2;
+  border-radius: 20px;      
 }
 
 .card_name {
@@ -384,15 +382,7 @@ img.card2photos {
   height: 35px;
   margin-bottom: 40px;
   padding-left: 15px;
-  
 }
-
-/*
-.card_link {
-  text-decoration: none;
-  color: black;
-  width: 31%;
-} */
 
 .column1 img {
   width: 300px;
@@ -433,11 +423,13 @@ img.card2photos {
   object-fit: cover;
 }
 /********** footer **********/
-.blocfinal {
+footer {
   display: flex;
   background-color: #f2f2f2;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2rem;  
+  padding-left: 35px;
+  padding-right: 0;
 }
 
 footer a {
@@ -554,27 +546,16 @@ footer a {
     background-color: white;
     width: 100%;
   }
-  .accommodation_title {
-    width: 100%;
-  }
+  
 
-  .displaymore {
-    width: 100%;
-    margin-left: 1rem;
-  }
+  
 
   .acco_cards {
     flex-direction: column;
     width: 100%;
   }
 
- 
-/*
-  .card_link {
-    width: 100%;
-  }
-*/
-  #activities {
+   #activities {
     width: 100%;
     height: auto;
   }
@@ -582,11 +563,7 @@ footer a {
     flex-direction: column;
   }
 
-  .blocfinal {
-    flex-direction: column;
-  }
-
-  .links {
+    .links {
     width: 100%;
   }
 }
