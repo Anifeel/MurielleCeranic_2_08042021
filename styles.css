@@ -108,6 +108,7 @@ main {
   font-family: "Raleway", serif;
 }
 
+
 .search {
   display: flex;
   margin-bottom: 1.4rem;
@@ -164,6 +165,17 @@ main {
   font-weight: bold;
   display: flex;
   height: 3rem;
+}
+
+.button_filters :hover {
+  border: 2px solid #0065fc;
+  border-radius: 2rem;
+  height: 3rem;
+  color: #0065fc;
+  box-shadow: 5px 5px 5px #d9d9d9;
+  transition: 0.3s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
 }
 
 .visual {
@@ -263,8 +275,8 @@ h3 {
   width: 930px;
 }
 
-#accommodation h2,
-#accommodation h3 {
+#accommodation h2
+{
   margin-left: 15px;
 }
 
@@ -431,7 +443,7 @@ footer {
 footer a {
   text-decoration: none;
   color: black;
-  margin: 3px;
+  margin: 5px;
 }
 
 .links {
@@ -452,12 +464,76 @@ footer a {
 @media screen and (min-width: 1200px) {
 }
 
-/********** Adaptation aux tablettes et petits ordis **********/
-@media screen and (min-width: 768px) and (max-width: 979px) {
-}
 
 /********** Adaptation aux tablettes **********/
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button_filters {
+  margin-bottom: 15px;
+}
+
+.sleep {
+  flex-direction: column;
+}
+
+#popular {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-left: 0;
+  padding: 10px;  
+}
+
+#popular .card {
+  margin-bottom: 16px;
+}
+
+.popular_title {
+  margin-bottom: 0;
+}
+
+.card_infos {
+  padding-left: 30px ;
+}
+
+.card_infos_price {
+  margin-top: 16px;
+}
+
+#accommodation {
+  width: 100%; 
+  padding: 10px; 
+}
+
+.acco_cards {
+  gap: 16px ;
+}
+#accommodation .card {
+ width: 48%;  
+}
+
+#activities {
+  margin-top: 26px;
+  width: 100%;  
+}
+
+.activities_photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer {
+  flex-direction: column;
+  gap: 20px ;
+}
+
+.links {
+  width: auto;
+}
 }
 
 /********** Adaptation aux smartphones **********/
@@ -494,6 +570,9 @@ footer a {
 
   .register {
     margin: 8px 8px 0 0;
+    position: absolute;
+    top: 16px;
+    right: 8px;
   }
 
   main {
@@ -755,5 +834,6 @@ footer a {
 
   .links {
     width: 100%;
+    margin-bottom: 10px;
   }
 }
