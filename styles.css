@@ -96,6 +96,9 @@ main {
   display: none;
 }
 
+.fas fa-search research_icon {
+  display: none;
+}
 .textcity {
   font-weight: bold;
   font-size: 1.2rem;
@@ -108,6 +111,10 @@ main {
   font-family: "Raleway", serif;
 }
 
+::placeholder { 
+  color: black;
+  opacity: 1; 
+}
 
 .search {
   display: flex;
@@ -167,15 +174,10 @@ main {
   height: 3rem;
 }
 
-.button_filters :hover {
-  border: 2px solid #0065fc;
-  border-radius: 2rem;
-  height: 3rem;
+.button_filters :hover {   
   color: #0065fc;
-  box-shadow: 5px 5px 5px #d9d9d9;
-  transition: 0.3s;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
+  transform: scale(1.04);  
+  cursor: pointer;  
 }
 
 .visual {
@@ -234,6 +236,10 @@ main {
   text-decoration: none;
   color: black;
   width: 30%;
+}
+
+.card :hover {
+  transform: scale(1.01);  
 }
 
 h3 {
@@ -456,84 +462,124 @@ footer a {
   font-weight: bold;
 }
 
-/* tablettes */
-/*@media (max-width:991px){ }
-*/
-/* avec .sleep : @media (min-width: 768px) */
-/********** Adaptation aux grands écrans **********/
-@media screen and (min-width: 1200px) {
-}
+/********** Adaptation aux petits ordis **********/
+@media screen and (min-width: 769px) and (max-width: 1439px) {
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .button_filters {
+    margin-bottom: 15px;
+  }
+
+  .sleep {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #popular {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  #popular .card {
+    width: 86%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  #accommodation {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%; 
+    justify-content: space-between;  
+    margin-bottom: 30px;
+  }
+
+  #accommodation .card {
+    width: 44%;
+  }
+
+  .activities_photos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
 
 /********** Adaptation aux tablettes **********/
 @media screen and (min-width: 481px) and (max-width: 768px) {
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-}
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.button_filters {
-  margin-bottom: 15px;
-}
+  .button_filters {
+    margin-bottom: 15px;
+  }
 
-.sleep {
-  flex-direction: column;
-}
+  .sleep {
+    flex-direction: column;
+  }
 
-#popular {
-  width: 100%;
-  margin-bottom: 30px;
-  margin-left: 0;
-  padding: 10px;  
-}
+  #popular {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: 0;
+    padding: 10px;  
+  }
 
-#popular .card {
-  margin-bottom: 16px;
-}
+  #popular .card {
+    margin-bottom: 16px;
+  }
 
-.popular_title {
-  margin-bottom: 0;
-}
+  .popular_title {
+    margin-bottom: 0;
+  }
 
-.card_infos {
-  padding-left: 30px ;
-}
+  .card_infos {
+    padding-left: 30px ;
+  }
 
-.card_infos_price {
-  margin-top: 16px;
-}
+  .card_infos_price {
+    margin-top: 16px;
+  }
 
-#accommodation {
-  width: 100%; 
-  padding: 10px; 
-}
+  #accommodation {
+    width: 100%; 
+    padding: 10px; 
+  }
 
-.acco_cards {
-  gap: 16px ;
-}
-#accommodation .card {
- width: 48%;  
-}
+  .acco_cards {
+    gap: 16px ;
+  }
+  #accommodation .card {
+  width: 48%;  
+  }
 
-#activities {
-  margin-top: 26px;
-  width: 100%;  
-}
+  #activities {
+    margin-top: 26px;
+    width: 100%;  
+  }
 
-.activities_photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  .activities_photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-footer {
-  flex-direction: column;
-  gap: 20px ;
-}
+  footer {
+    flex-direction: column;
+    gap: 20px ;
+  }
 
-.links {
-  width: auto;
-}
+  .links {
+    width: auto;
+  }
 }
 
 /********** Adaptation aux smartphones **********/
@@ -634,7 +680,7 @@ footer {
   .textcity {
     font-size: 14px;
     flex: 1;
-  }
+  } 
 
   .filters_area {
     flex-direction: column;
@@ -686,6 +732,7 @@ footer {
     width: 100%;
     margin-left: 0;
     border-radius: 0;
+    padding: 20px;    
   }
 
   #popular h2 {
@@ -694,7 +741,7 @@ footer {
 
   #popular .card {
     height: 130px;
-    margin-bottom: 12px;
+    margin-bottom: 12px;    
   }
 
   #popular picture {
@@ -714,7 +761,7 @@ footer {
   }
 
   #accommodation {
-    padding: 8px;
+    padding: 20px;
   }
 
   .card picture {
@@ -786,6 +833,10 @@ footer {
     font-size: 12px;
   }
 
+  h3.displaymore {
+    margin-top: 28px;
+  }
+
   .card_photo {
     width: 100%;
     height: auto;
@@ -795,6 +846,7 @@ footer {
     width: 100%;
     height: auto;
     margin-top: 0;
+    padding: 20px;
   }
 
   .activities_photos {
