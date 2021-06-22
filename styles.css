@@ -93,16 +93,12 @@ main {
 }
 
 .research_icon {
-  display: none;
+  display: none !important;
 }
 
-.fas fa-search research_icon {
-  display: none;
-}
 .textcity {
   font-weight: bold;
-  font-size: 1.2rem;
-  color: black;
+  font-size: 1.2rem;  
   border-left: none;
   border-right: none;
   border-top: 1px solid #f2f2f2;
@@ -174,7 +170,7 @@ main {
   height: 3rem;
 }
 
-.button_filters :hover {   
+.button_filters:hover {   
   color: #0065fc;
   transform: scale(1.04);  
   cursor: pointer;  
@@ -238,7 +234,7 @@ main {
   width: 30%;
 }
 
-.card :hover {
+.card:hover {
   transform: scale(1.01);  
 }
 
@@ -363,8 +359,7 @@ h3 {
 }
 
 /********** section Activités à Marseille **********/
-#activities {
-  /* display: flex; */
+#activities {  
   border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -474,6 +469,10 @@ footer a {
     margin-bottom: 15px;
   }
 
+  .filters_area h2 {
+    margin-top: 7px;
+  }
+
   .sleep {
     display: flex;
     flex-direction: column;
@@ -503,19 +502,74 @@ footer a {
     width: 44%;
   }
 
-  .activities_photos {
-    display: flex;
-    flex-wrap: wrap;
+  .column1, .column2, .column3, .column4 {
+    width: 44%;
+  }
+
+  .card2photos {
     width: 100%;
-    justify-content: space-around;
+  }
+
+  .column1 img,
+  .column3 img {
+    width: 100%;
+  }
+
+  .activities_photos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
   }
 }
 
 /********** Adaptation aux tablettes **********/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .header_nav {
+    margin: 0;
+    width: 100%;
+  }
+
+  .logo {
+    margin: 8px 0 0 8px;
+  }
+
+  .register {
+    margin: 8px 8px 0 0;
+    position: absolute;
+    top: 16px;
+    right: 8px;
+  }
+
+  .menu {
+    padding-left: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav li {
+    margin-right: 0;
+  }
+
+  main {
+    margin: 0 10px;
+  }
+  
+  .research_text {
+    display: none;
+  }
+
+  .research_icon {
+    display: block !important;
+  }
   .filters {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .filters_area h2 {
+    margin-top: 7px;
   }
 
   .button_filters {
@@ -572,6 +626,21 @@ footer a {
     justify-content: space-between;
   }
 
+  
+
+  .column1, .column2, .column3, .column4 {
+    width:99%;
+  }
+
+  .card2photos {
+    width: 100%;
+  }
+
+  .column1 img,
+  .column3 img {
+    width: 100%;
+  }
+
   footer {
     flex-direction: column;
     gap: 20px ;
@@ -622,7 +691,7 @@ footer a {
   }
 
   main {
-    margin: 0 10px;
+    margin: 0;
   }
 
   .menuregister {
@@ -702,7 +771,7 @@ footer a {
   }
 
   .research_icon {
-    display: block;
+    display: block !important;
   }
 
   .button_filters {
