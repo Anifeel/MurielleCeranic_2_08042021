@@ -458,7 +458,7 @@ footer a {
 }
 
 /********** Adaptation aux petits ordis **********/
-@media screen and (min-width: 769px) and (max-width: 1439px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   
   .filters {
     display: flex;
@@ -524,7 +524,7 @@ footer a {
 }
 
 /********** Adaptation aux tablettes **********/
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .header_nav {
     margin: 0;
     width: 100%;
@@ -672,9 +672,9 @@ footer a {
 }
 
 /********** Adaptation aux smartphones **********/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   body {
-    max-width: 480px;
+    max-width: 767px;
   }
 
   body h3 {
@@ -767,7 +767,7 @@ footer a {
 
   .textcity {
     font-size: 14px;
-    flex: 1;
+    /*flex: 1;*/
   } 
 
   .filters_area {
@@ -867,11 +867,6 @@ footer a {
   .activities {
     width: 50%;
   }
-
-  /* .card_photo img{
-    max-width: 100%;
-    height: auto;
-  } */
 
   #accommodation {
     background-color: white;
