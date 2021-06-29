@@ -2,19 +2,19 @@
   box-sizing: border-box;
 }
 
-/* centrage de la page */
+@font-face {
+  font-family: "Raleway";
+  src: url(Reservia/static/Raleway.ttf);
+}
+
 body {
   font-family: "Raleway", serif;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url("Raleway.ttf");
-}
-
 /******************header********************/
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +71,11 @@ nav li .accommodation {
   color: #0065fc;
 }
 
+.menu .accommodation {
+  padding: 2rem;
+  border-top: 3px solid #0065fc;
+}
+
 main {
   margin: 0 35px;
 }
@@ -98,7 +103,7 @@ main {
 
 .textcity {
   font-weight: bold;
-  font-size: 1.2rem;  
+  font-size: 1.2rem;
   border-left: none;
   border-right: none;
   border-top: 1px solid #f2f2f2;
@@ -107,9 +112,9 @@ main {
   font-family: "Raleway", serif;
 }
 
-::placeholder { 
+::placeholder {
   color: black;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .search {
@@ -170,10 +175,10 @@ main {
   height: 3rem;
 }
 
-.button_filters:hover {   
+.button_filters:hover {
   color: #0065fc;
-  transform: scale(1.04);  
-  cursor: pointer;  
+  transform: scale(1.04);
+  cursor: pointer;
 }
 
 .visual {
@@ -185,8 +190,6 @@ main {
   padding: 1rem;
   letter-spacing: 1pt;
 }
-
-/**********  **********/
 
 .infologo {
   border-radius: 50%;
@@ -235,7 +238,7 @@ main {
 }
 
 .card:hover {
-  transform: scale(1.01);  
+  transform: scale(1.01);
 }
 
 h3 {
@@ -277,8 +280,7 @@ h3 {
   width: 930px;
 }
 
-#accommodation h2
-{
+#accommodation h2 {
   margin-left: 15px;
 }
 
@@ -359,7 +361,7 @@ h3 {
 }
 
 /********** section Activités à Marseille **********/
-#activities {  
+#activities {
   border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -387,14 +389,22 @@ img.card2photos {
 }
 
 .card_name {
-  width: 300px;
+  /*width: 300px;*/
   height: 35px;
   margin-bottom: 40px;
   padding-left: 15px;
+  font-size: 15px;
 }
 
+.column {
+  width: calc(25% - 20px);
+}
+
+.column img {
+  width: 100%;
+}
 .column1 img {
-  width: 300px;
+  /*width: 300px;*/
   height: 390px;
   object-fit: cover;
 }
@@ -404,30 +414,30 @@ img.card2photos {
 }
 
 .pomegues {
-  width: 300px;
+  /*width: 300px;*/
   height: 160px;
   object-fit: cover;
 }
 
 .frioul {
-  width: 300px;
+  /*width: 300px;*/
   height: 132px;
   object-fit: cover;
 }
 .column3 img {
-  width: 300px;
+  /*width: 300px;*/
   height: 390px;
   object-fit: cover;
 }
 
 .garde {
-  width: 300px;
+  /*width: 300px;*/
   height: 145px;
   object-fit: cover;
 }
 
 .longchamp {
-  width: 300px;
+  /*width: 300px;*/
   height: 147px;
   object-fit: cover;
 }
@@ -458,11 +468,11 @@ footer a {
 }
 
 /********** Adaptation aux petits ordis **********/
+/*
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   
   .filters {
     display: flex;
-    flex-wrap: wrap;
   }
 
   .button_filters {
@@ -522,40 +532,54 @@ footer a {
   justify-content: space-around;
   }
 }
-
+*/
 /********** Adaptation aux tablettes **********/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1080px) {
   .header_nav {
     margin: 0;
+    padding-top: 20px;
     width: 100%;
   }
 
+  header {
+    margin: 0;
+  }
+
   .logo {
-    margin: 8px 0 0 8px;
+    margin: 8px 0 0 30px;
   }
 
   .register {
-    margin: 8px 8px 0 0;
+    margin: 8px 30px 0 0;
     position: absolute;
     top: 16px;
     right: 8px;
   }
 
   .menu {
-    padding-left: 0;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid #f2f2f2;
+    padding: 0;
   }
 
   nav li {
     margin-right: 0;
   }
 
-  .menu {
-    width: 100%;
-    border-bottom: 2px solid #f2f2f2;
-    padding: 0;
+  .menu li .accommodation {
+    border-top: none;
+    padding: 1rem;
+  }
+
+  .menu li .activities {
+    border-bottom: transparent;
+  }
+
+  .menu :nth-child(1) {
+    border-bottom: 2px solid #0065fc;
   }
 
   .menu li {
@@ -575,7 +599,7 @@ footer a {
   main {
     margin: 0 10px;
   }
-  
+
   .research_text {
     display: none;
   }
@@ -604,7 +628,7 @@ footer a {
     width: 100%;
     margin-bottom: 30px;
     margin-left: 0;
-    padding: 10px;  
+    padding: 10px;
   }
 
   #popular .card {
@@ -616,7 +640,7 @@ footer a {
   }
 
   .card_infos {
-    padding-left: 30px ;
+    padding-left: 30px;
   }
 
   .card_infos_price {
@@ -624,32 +648,34 @@ footer a {
   }
 
   #accommodation {
-    width: 100%; 
-    padding: 10px; 
+    width: 100%;
+    padding: 10px;
   }
 
   .acco_cards {
-    gap: 16px ;
+    gap: 16px;
   }
   #accommodation .card {
-  width: 48%;  
+    width: 48%;
   }
 
   #activities {
     margin-top: 26px;
-    width: 100%;  
+    width: 100%;
   }
 
   .activities_photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    gap: 20px;
   }
 
-  
-
-  .column1, .column2, .column3, .column4 {
-    width:99%;
+  .column1,
+  .column2,
+  .column3,
+  .column4 {
+    width: 99%;
   }
 
   .card2photos {
@@ -661,9 +687,12 @@ footer a {
     width: 100%;
   }
 
+  .column img {
+    height: 200px;
+  }
   footer {
     flex-direction: column;
-    gap: 20px ;
+    gap: 20px;
   }
 
   .links {
@@ -691,8 +720,8 @@ footer a {
 
   header {
     margin: 0;
+    padding: 0;
     width: 100%;
-    padding: 20px;
   }
 
   .header_nav {
@@ -700,17 +729,16 @@ footer a {
     width: 100%;
   }
 
-  
+  .logo {
+    padding-left: 20px;
+    margin-top: 24px;
+  }
 
   .register {
     margin: 20px 20px 0 0;
     position: absolute;
     top: 22px;
     right: 2px;
-  }
-
-  main {
-    margin: 0;
   }
 
   .menuregister {
@@ -734,13 +762,31 @@ footer a {
     text-align: center;
   }
 
+  .menu li .activities {
+    border-bottom: transparent;
+  }
+
+  .menu :nth-child(1) {
+    border-bottom: 2px solid #0065fc;
+  }
+
   .menu li:hover {
     border-top: none;
     border-bottom: 2px solid #0065fc;
   }
 
+  .menu .accommodation {
+    border-top: none;
+    padding: 1rem;
+  }
+
   .header_nav {
     order: 1;
+    padding-top: 30px;
+  }
+
+  main {
+    margin: 0;
   }
 
   h1 {
@@ -768,7 +814,7 @@ footer a {
   .textcity {
     font-size: 14px;
     /*flex: 1;*/
-  } 
+  }
 
   .filters_area {
     flex-direction: column;
@@ -820,7 +866,7 @@ footer a {
     width: 100%;
     margin-left: 0;
     border-radius: 0;
-    padding: 20px;    
+    padding: 20px;
   }
 
   #popular h2 {
@@ -829,7 +875,7 @@ footer a {
 
   #popular .card {
     height: 130px;
-    margin-bottom: 12px;    
+    margin-bottom: 12px;
   }
 
   #popular picture {
@@ -947,6 +993,10 @@ footer a {
   }
 
   .card2photos {
+    width: 100%;
+  }
+
+  .column {
     width: 100%;
   }
 
